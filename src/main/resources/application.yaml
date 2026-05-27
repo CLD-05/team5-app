@@ -24,6 +24,7 @@ spring:
     timeout: 30m
     redis:
       namespace: petcarelog:session
+      configure-action: none
 
   data:
     redis:
