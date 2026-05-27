@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @Getter
 @NoArgsConstructor
 @Entity
@@ -41,11 +39,6 @@ public class CarePreset {
     @Column(name = "sort_order", nullable = false)
     private Integer sortOrder;
 
-    @Column(name = "created_at", nullable = false, insertable = false, updatable = false)
-    private LocalDateTime createdAt;
-
-    @Column(name = "updated_at", nullable = false, insertable = false, updatable = false)
-    private LocalDateTime updatedAt;
 
     public CarePreset(Long userId, String name, String category, String icon, String color, Boolean defaultPreset, Integer sortOrder) {
         this.userId = userId;
